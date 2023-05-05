@@ -11,7 +11,7 @@ export default class WorkspaceSnippetsExplorerView extends BasicSnippetsExplorer
     this._onDidChangeTreeData.event;
 
   public static viewId =
-    "snippetsmanager-snippetsView-WorkspaceSnippetsExplorerView";
+    "snippets-manager-sleek-snippetsView-WorkspaceSnippetsExplorerView";
 
   constructor(context: vscode.ExtensionContext) {
     super(context);

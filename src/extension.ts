@@ -39,17 +39,17 @@ export function activate(context: vscode.ExtensionContext) {
   new ExtensionSnippetsExplorerView(context);
 
   context.subscriptions.push(
-    vscode.commands.registerCommand("snippetsmanager.search", (type) => {
+    vscode.commands.registerCommand("snippets-manager-sleek.search", (type) => {
       return searchSnippet(type);
     })
   );
 
   context.subscriptions.push(
     vscode.commands.registerCommand(
-      "snippetsmanager.searchWorkspaceSnippets",
+      "snippets-manager-sleek.searchWorkspaceSnippets",
       async () => {
         await vscode.commands.executeCommand(
-          "snippetsmanager.search",
+          "snippets-manager-sleek.search",
           SnippetType.WORKSPACE
         );
       }
@@ -58,10 +58,10 @@ export function activate(context: vscode.ExtensionContext) {
 
   context.subscriptions.push(
     vscode.commands.registerCommand(
-      "snippetsmanager.searchUserSnippets",
+      "snippets-manager-sleek.searchUserSnippets",
       async () => {
         await vscode.commands.executeCommand(
-          "snippetsmanager.search",
+          "snippets-manager-sleek.search",
           SnippetType.USER
         );
       }
@@ -70,10 +70,10 @@ export function activate(context: vscode.ExtensionContext) {
 
   context.subscriptions.push(
     vscode.commands.registerCommand(
-      "snippetsmanager.searchExtensionSnippets",
+      "snippets-manager-sleek.searchExtensionSnippets",
       async () => {
         await vscode.commands.executeCommand(
-          "snippetsmanager.search",
+          "snippets-manager-sleek.search",
           SnippetType.EXTENSION
         );
       }
@@ -82,7 +82,7 @@ export function activate(context: vscode.ExtensionContext) {
 
   context.subscriptions.push(
     vscode.commands.registerCommand(
-      "snippetsmanager.createSnippet",
+      "snippets-manager-sleek.createSnippet",
       async (prefix?: string) => {
         return createSnippet(prefix);
       }
@@ -91,7 +91,7 @@ export function activate(context: vscode.ExtensionContext) {
 
   context.subscriptions.push(
     vscode.commands.registerCommand(
-      "snippetsmanager.createSnippetTo",
+      "snippets-manager-sleek.createSnippetTo",
       async (prefix?: string, uri?: vscode.Uri) => {
         return createSnippetTo(prefix, uri);
       }
@@ -107,7 +107,7 @@ export function activate(context: vscode.ExtensionContext) {
 
   context.subscriptions.push(
     vscode.commands.registerCommand(
-      "_snippetsmanager.deleteSnippetFile",
+      "_snippets-manager-sleek.deleteSnippetFile",
       (snippet) => {
         deleteSnippetFile(snippet);
       }
@@ -116,7 +116,7 @@ export function activate(context: vscode.ExtensionContext) {
 
   context.subscriptions.push(
     vscode.commands.registerCommand(
-      "_snippetsmanager.duplicateSnippet",
+      "_snippets-manager-sleek.duplicateSnippet",
       (snippet) => {
         duplicateSnippet(snippet);
       }
@@ -125,7 +125,7 @@ export function activate(context: vscode.ExtensionContext) {
 
   context.subscriptions.push(
     vscode.commands.registerCommand(
-      "_snippetsmanager.deleteSnippet",
+      "_snippets-manager-sleek.deleteSnippet",
       (snippet) => {
         deleteSnippet(snippet);
       }
@@ -134,7 +134,7 @@ export function activate(context: vscode.ExtensionContext) {
 
   context.subscriptions.push(
     vscode.commands.registerCommand(
-      "_snippetsmanager.editSnippet",
+      "_snippets-manager-sleek.editSnippet",
       (snippet) => {
         editSnippet(snippet);
       }
@@ -143,7 +143,7 @@ export function activate(context: vscode.ExtensionContext) {
 
   context.subscriptions.push(
     vscode.commands.registerCommand(
-      "_snippetsmanager.showSnippet",
+      "_snippets-manager-sleek.showSnippet",
       (snippet) => {
         showSnippet(snippet);
       }
@@ -151,19 +151,19 @@ export function activate(context: vscode.ExtensionContext) {
   );
 
   context.subscriptions.push(
-    vscode.commands.registerCommand("snippetsmanager.refresh", () => {
+    vscode.commands.registerCommand("snippets-manager-sleek.refresh", () => {
       refreshAllView();
     })
   );
 
   context.subscriptions.push(
-    vscode.commands.registerCommand("snippetsmanager.showSource", async () => {
+    vscode.commands.registerCommand("snippets-manager-sleek.showSource", async () => {
       return showSource();
     })
   );
 
   context.subscriptions.push(
-    vscode.commands.registerCommand("snippetsmanager.showEditor", async () => {
+    vscode.commands.registerCommand("snippets-manager-sleek.showEditor", async () => {
       return showEditor();
     })
   );

@@ -39,16 +39,16 @@ export default abstract class BasicSnippetsExplorerView
 
   public getTreeItem(element: SnippetTreeItem): SnippetTreeItem {
     const showSnippetCommand = {
-      command: "_snippetsmanager.showSnippet",
+      command: "_snippets-manager-sleek.showSnippet",
       title: "Show this snippet in editor.",
       arguments: [element],
     };
 
     let contextValue = "";
     if (element.isFile) {
-      contextValue = "snippetsmanager-snippetsView-Explorer-FileItem";
+      contextValue = "snippets-manager-sleek-snippetsView-Explorer-FileItem";
     } else if (!element.children) {
-      contextValue = "snippetsmanager-snippetsView-Explorer-Item";
+      contextValue = "snippets-manager-sleek-snippetsView-Explorer-Item";
     }
 
     const item = new SnippetTreeItem(

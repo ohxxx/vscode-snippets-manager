@@ -52,11 +52,11 @@ export class CodeSnippetsEditor implements vscode.CustomTextEditorProvider {
   }
 
   private static readonly activeContextKey =
-    "snippetsmanagerCodeSnippetsEditorFocus";
+    "snippets-manager-sleekCodeSnippetsEditorFocus";
 
   public static isActive: boolean = false;
 
-  public static readonly viewType = "snippetsmanager.codeSnippetsEditorView";
+  public static readonly viewType = "snippets-manager-sleek.codeSnippetsEditorView";
 
   constructor(private readonly context: vscode.ExtensionContext) {}
 

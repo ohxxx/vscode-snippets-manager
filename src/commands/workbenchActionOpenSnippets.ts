@@ -8,4 +8,4 @@ export default async () => {
 };
 
 export const workbenchActionOpenSnippetsId =
-  "_snippetsmanager.workbenchActionOpenSnippets";
+  "_snippets-manager-sleek.workbenchActionOpenSnippets";

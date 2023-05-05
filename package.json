@@ -9,7 +9,7 @@
     "snippet manager",
     "snippets"
   ],
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "xxxDeveloper",
   "engines": {
     "vscode": "^1.59.0"
@@ -28,7 +28,7 @@
   "homepage": "https://github.com/ohxxx/vscode-snippets-manager#readme",
   "activationEvents": [
     "onStartupFinished",
-    "onView:snippetsmanager-snippetsView"
+    "onView:snippets-manager-sleek-snippetsView"
   ],
   "main": "./out/extension.js",
   "browser": "./dist/web/extension.js",
@@ -36,24 +36,24 @@
     "viewsContainers": {
       "activitybar": [
         {
-          "id": "snippetsmanager-snippetsView",
+          "id": "snippets-manager-sleek-snippetsView",
           "title": "%extension.snippetsView.title%",
           "icon": "assets/logo.svg"
         }
       ]
     },
     "views": {
-      "snippetsmanager-snippetsView": [
+      "snippets-manager-sleek-snippetsView": [
         {
-          "id": "snippetsmanager-snippetsView-WorkspaceSnippetsExplorerView",
+          "id": "snippets-manager-sleek-snippetsView-WorkspaceSnippetsExplorerView",
           "name": "%extension.WorkspaceSnippetsExplorerView.name%"
         },
         {
-          "id": "snippetsmanager-snippetsView-UserSnippetsExplorerView",
+          "id": "snippets-manager-sleek-snippetsView-UserSnippetsExplorerView",
           "name": "%extension.UserSnippetsExplorerView.name%"
         },
         {
-          "id": "snippetsmanager-snippetsView-ExtensionSnippetsExplorerView",
+          "id": "snippets-manager-sleek-snippetsView-ExtensionSnippetsExplorerView",
           "name": "%extension.ExtensionSnippetsExplorerView.name%"
         }
       ]
@@ -61,130 +61,130 @@
     "menus": {
       "editor/title": [
         {
-          "command": "snippetsmanager.showSource",
-          "when": "snippetsmanagerCodeSnippetsEditorFocus",
+          "command": "snippets-manager-sleek.showSource",
+          "when": "snippets-manager-sleekCodeSnippetsEditorFocus",
           "group": "navigation"
         },
         {
-          "command": "snippetsmanager.showEditor",
-          "when": "resourceExtname == '.code-snippets'&& !snippetsmanagerCodeSnippetsEditorFocus",
+          "command": "snippets-manager-sleek.showEditor",
+          "when": "resourceExtname == '.code-snippets'&& !snippets-manager-sleekCodeSnippetsEditorFocus",
           "group": "navigation"
         }
       ],
       "view/title": [
         {
-          "command": "_snippetsmanager.workbenchActionOpenSnippets",
-          "when": "view == snippetsmanager-snippetsView-WorkspaceSnippetsExplorerView",
+          "command": "_snippets-manager-sleek.workbenchActionOpenSnippets",
+          "when": "view == snippets-manager-sleek-snippetsView-WorkspaceSnippetsExplorerView",
           "group": "navigation@8"
         },
         {
-          "command": "_snippetsmanager.workbenchActionOpenSnippets",
-          "when": "view == snippetsmanager-snippetsView-UserSnippetsExplorerView",
+          "command": "_snippets-manager-sleek.workbenchActionOpenSnippets",
+          "when": "view == snippets-manager-sleek-snippetsView-UserSnippetsExplorerView",
           "group": "navigation@8"
         },
         {
-          "command": "snippetsmanager.searchWorkspaceSnippets",
-          "when": "view == snippetsmanager-snippetsView-WorkspaceSnippetsExplorerView",
+          "command": "snippets-manager-sleek.searchWorkspaceSnippets",
+          "when": "view == snippets-manager-sleek-snippetsView-WorkspaceSnippetsExplorerView",
           "group": "navigation@9"
         },
         {
-          "command": "snippetsmanager.searchUserSnippets",
-          "when": "view == snippetsmanager-snippetsView-UserSnippetsExplorerView",
+          "command": "snippets-manager-sleek.searchUserSnippets",
+          "when": "view == snippets-manager-sleek-snippetsView-UserSnippetsExplorerView",
           "group": "navigation@9"
         },
         {
-          "command": "snippetsmanager.searchExtensionSnippets",
-          "when": "view == snippetsmanager-snippetsView-ExtensionSnippetsExplorerView",
+          "command": "snippets-manager-sleek.searchExtensionSnippets",
+          "when": "view == snippets-manager-sleek-snippetsView-ExtensionSnippetsExplorerView",
           "group": "navigation@9"
         },
         {
-          "command": "snippetsmanager.refresh",
-          "when": "view == snippetsmanager-snippetsView-WorkspaceSnippetsExplorerView",
+          "command": "snippets-manager-sleek.refresh",
+          "when": "view == snippets-manager-sleek-snippetsView-WorkspaceSnippetsExplorerView",
           "group": "navigation@10"
         },
         {
-          "command": "snippetsmanager.refresh",
-          "when": "view == snippetsmanager-snippetsView-UserSnippetsExplorerView",
+          "command": "snippets-manager-sleek.refresh",
+          "when": "view == snippets-manager-sleek-snippetsView-UserSnippetsExplorerView",
           "group": "navigation@10"
         },
         {
-          "command": "snippetsmanager.refresh",
-          "when": "view == snippetsmanager-snippetsView-ExtensionSnippetsExplorerView",
+          "command": "snippets-manager-sleek.refresh",
+          "when": "view == snippets-manager-sleek-snippetsView-ExtensionSnippetsExplorerView",
           "group": "navigation@10"
         }
       ],
       "view/item/context": [
         {
-          "command": "_snippetsmanager.editSnippet",
-          "when": "viewItem == snippetsmanager-snippetsView-Explorer-Item",
+          "command": "_snippets-manager-sleek.editSnippet",
+          "when": "viewItem == snippets-manager-sleek-snippetsView-Explorer-Item",
           "group": "inline@1"
         },
         {
-          "command": "_snippetsmanager.duplicateSnippet",
-          "when": "viewItem == snippetsmanager-snippetsView-Explorer-Item",
+          "command": "_snippets-manager-sleek.duplicateSnippet",
+          "when": "viewItem == snippets-manager-sleek-snippetsView-Explorer-Item",
           "group": "inline@2"
         },
         {
-          "command": "_snippetsmanager.deleteSnippet",
-          "when": "viewItem == snippetsmanager-snippetsView-Explorer-Item",
+          "command": "_snippets-manager-sleek.deleteSnippet",
+          "when": "viewItem == snippets-manager-sleek-snippetsView-Explorer-Item",
           "group": "inline@3"
         },
         {
-          "command": "_snippetsmanager.showSnippet",
-          "when": "viewItem == snippetsmanager-snippetsView-Explorer-FileItem",
+          "command": "_snippets-manager-sleek.showSnippet",
+          "when": "viewItem == snippets-manager-sleek-snippetsView-Explorer-FileItem",
           "group": "inline@1"
         },
         {
-          "command": "_snippetsmanager.deleteSnippetFile",
-          "when": "viewItem == snippetsmanager-snippetsView-Explorer-FileItem",
+          "command": "_snippets-manager-sleek.deleteSnippetFile",
+          "when": "viewItem == snippets-manager-sleek-snippetsView-Explorer-FileItem",
           "group": "inline@2"
         }
       ],
       "commandPalette": [
         {
-          "command": "snippetsmanager.createSnippetTo"
+          "command": "snippets-manager-sleek.createSnippetTo"
         },
         {
-          "command": "snippetsmanager.createSnippet",
+          "command": "snippets-manager-sleek.createSnippet",
           "when": "editorHasSelection"
         },
         {
-          "command": "snippetsmanager.showSource",
-          "when": "snippetsmanagerCodeSnippetsEditorFocus"
+          "command": "snippets-manager-sleek.showSource",
+          "when": "snippets-manager-sleekCodeSnippetsEditorFocus"
         },
         {
-          "command": "snippetsmanager.showEditor",
-          "when": "resourceExtname == '.code-snippets' && !snippetsmanagerCodeSnippetsEditorFocus"
+          "command": "snippets-manager-sleek.showEditor",
+          "when": "resourceExtname == '.code-snippets' && !snippets-manager-sleekCodeSnippetsEditorFocus"
         },
         {
-          "command": "_snippetsmanager.duplicateSnippet",
+          "command": "_snippets-manager-sleek.duplicateSnippet",
           "when": "false"
         },
         {
-          "command": "_snippetsmanager.deleteSnippet",
+          "command": "_snippets-manager-sleek.deleteSnippet",
           "when": "false"
         },
         {
-          "command": "_snippetsmanager.editSnippet",
+          "command": "_snippets-manager-sleek.editSnippet",
           "when": "false"
         },
         {
-          "command": "_snippetsmanager.showSnippet",
+          "command": "_snippets-manager-sleek.showSnippet",
           "when": "false"
         },
         {
-          "command": "_snippetsmanager.deleteSnippetFile",
+          "command": "_snippets-manager-sleek.deleteSnippetFile",
           "when": "false"
         }
       ],
       "editor/context": [
         {
-          "command": "snippetsmanager.createSnippet",
+          "command": "snippets-manager-sleek.createSnippet",
           "when": "editorHasSelection",
           "group": "snippets"
         },
         {
-          "command": "snippetsmanager.createSnippetTo",
+          "command": "snippets-manager-sleek.createSnippetTo",
           "when": "editorHasSelection",
           "group": "snippets"
         }
@@ -192,83 +192,83 @@
     },
     "commands": [
       {
-        "command": "snippetsmanager.createSnippet",
+        "command": "snippets-manager-sleek.createSnippet",
         "title": "%extension.createSnippet.title%",
         "category": "Snippets Manager"
       },
       {
-        "command": "snippetsmanager.createSnippetTo",
+        "command": "snippets-manager-sleek.createSnippetTo",
         "title": "%extension.createSnippetTo.title%",
         "category": "Snippets Manager"
       },
       {
-        "command": "_snippetsmanager.workbenchActionOpenSnippets",
+        "command": "_snippets-manager-sleek.workbenchActionOpenSnippets",
         "title": "%extension.workbenchActionOpenSnippets.title%",
         "icon": "$(add)"
       },
       {
-        "command": "_snippetsmanager.duplicateSnippet",
+        "command": "_snippets-manager-sleek.duplicateSnippet",
         "title": "%extension.duplicateSnippet.title%",
         "icon": "$(files)"
       },
       {
-        "command": "_snippetsmanager.deleteSnippet",
+        "command": "_snippets-manager-sleek.deleteSnippet",
         "title": "%extension.deleteSnippet.title%",
         "icon": "$(chrome-close)"
       },
       {
-        "command": "_snippetsmanager.editSnippet",
+        "command": "_snippets-manager-sleek.editSnippet",
         "title": "%extension.editSnippet.title%",
         "icon": "$(edit)"
       },
       {
-        "command": "_snippetsmanager.showSnippet",
+        "command": "_snippets-manager-sleek.showSnippet",
         "title": "%extension.showSnippet.title%",
         "icon": "$(file-symlink-file)"
       },
       {
-        "command": "_snippetsmanager.deleteSnippetFile",
+        "command": "_snippets-manager-sleek.deleteSnippetFile",
         "title": "%extension.deleteSnippetFile.title%",
         "icon": "$(chrome-close)"
       },
       {
-        "command": "snippetsmanager.refresh",
+        "command": "snippets-manager-sleek.refresh",
         "title": "%extension.refresh.title%",
         "icon": "$(refresh)",
         "category": "Snippets Manager"
       },
       {
-        "command": "snippetsmanager.search",
+        "command": "snippets-manager-sleek.search",
         "title": "%extension.search.title%",
         "icon": "$(search-fuzzy)",
         "category": "Snippets Manager"
       },
       {
-        "command": "snippetsmanager.searchWorkspaceSnippets",
+        "command": "snippets-manager-sleek.searchWorkspaceSnippets",
         "title": "%extension.searchWorkspaceSnippets.title%",
         "icon": "$(search-fuzzy)",
         "category": "Snippets Manager"
       },
       {
-        "command": "snippetsmanager.searchUserSnippets",
+        "command": "snippets-manager-sleek.searchUserSnippets",
         "title": "%extension.searchUserSnippets.title%",
         "icon": "$(search-fuzzy)",
         "category": "Snippets Manager"
       },
       {
-        "command": "snippetsmanager.searchExtensionSnippets",
+        "command": "snippets-manager-sleek.searchExtensionSnippets",
         "title": "%extension.searchExtensionSnippets.title%",
         "icon": "$(search-fuzzy)",
         "category": "Snippets Manager"
       },
       {
-        "command": "snippetsmanager.showSource",
+        "command": "snippets-manager-sleek.showSource",
         "title": "%extension.showSource.title%",
         "category": "Snippets Manager",
         "icon": "$(go-to-file)"
       },
       {
-        "command": "snippetsmanager.showEditor",
+        "command": "snippets-manager-sleek.showEditor",
         "title": "%extension.showEditor.title%",
         "category": "Snippets Manager",
         "icon": "$(file-symlink-file)"
@@ -276,7 +276,7 @@
     ],
     "customEditors": [
       {
-        "viewType": "snippetsmanager.codeSnippetsEditorView",
+        "viewType": "snippets-manager-sleek.codeSnippetsEditorView",
         "displayName": "%extension.codeSnippetsEditorView.displayName%",
         "selector": [
           {
@@ -304,8 +304,8 @@
     "test-web": "vscode-test-web ./test.temp --browserType=chromium --extensionDevelopmentPath=. --extensionTestsPath=dist/web/test/suite/index.js",
     "change-registry": "node ./pnpm.lock.change-registry.mjs",
     "_vscode:pack": "vsce package",
-    "_vscode:install": "ls snippetsmanager-*.vsix | xargs code --install-extension",
-    "_vscode:uninstall": "code --uninstall-extension ohxxx.snippetsmanager"
+    "_vscode:install": "ls snippets-manager-sleek-*.vsix | xargs code --install-extension",
+    "_vscode:uninstall": "code --uninstall-extension ohxxx.snippets-manager-sleek"
   },
   "devDependencies": {
     "@types/fs-extra": "^9.0.13",

@@ -54,7 +54,7 @@ export default async (type?: SnippetType) => {
 
   if (result) {
     vscode.commands.executeCommand(
-      "_snippetsmanager.showSnippet",
+      "_snippets-manager-sleek.showSnippet",
       result.snippet
     );
   }
