@@ -9,8 +9,8 @@
     "**/Thumbs.db": true,
     ".vscode-test": true,
     ".vscode-test-web": true,
-    "out": true,
-    "out-view": true
+    "out": false,
+    "out-view": false
   },
   "search.exclude": {
     ".vscode-test": true,

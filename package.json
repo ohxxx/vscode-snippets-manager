@@ -9,10 +9,10 @@
     "snippet manager",
     "snippets"
   ],
-  "version": "0.0.2",
+  "version": "0.0.5",
   "publisher": "xxxDeveloper",
   "engines": {
-    "vscode": "^1.59.0"
+    "vscode": "^1.78.0"
   },
   "categories": [
     "Programming Languages",
@@ -194,12 +194,12 @@
       {
         "command": "snippets-manager-sleek.createSnippet",
         "title": "%extension.createSnippet.title%",
-        "category": "Snippets Manager"
+        "category": "Snippets Manager Sleek"
       },
       {
         "command": "snippets-manager-sleek.createSnippetTo",
         "title": "%extension.createSnippetTo.title%",
-        "category": "Snippets Manager"
+        "category": "Snippets Manager Sleek"
       },
       {
         "command": "_snippets-manager-sleek.workbenchActionOpenSnippets",
@@ -235,42 +235,42 @@
         "command": "snippets-manager-sleek.refresh",
         "title": "%extension.refresh.title%",
         "icon": "$(refresh)",
-        "category": "Snippets Manager"
+        "category": "Snippets Manager Sleek"
       },
       {
         "command": "snippets-manager-sleek.search",
         "title": "%extension.search.title%",
         "icon": "$(search-fuzzy)",
-        "category": "Snippets Manager"
+        "category": "Snippets Manager Sleek"
       },
       {
         "command": "snippets-manager-sleek.searchWorkspaceSnippets",
         "title": "%extension.searchWorkspaceSnippets.title%",
         "icon": "$(search-fuzzy)",
-        "category": "Snippets Manager"
+        "category": "Snippets Manager Sleek"
       },
       {
         "command": "snippets-manager-sleek.searchUserSnippets",
         "title": "%extension.searchUserSnippets.title%",
         "icon": "$(search-fuzzy)",
-        "category": "Snippets Manager"
+        "category": "Snippets Manager Sleek"
       },
       {
         "command": "snippets-manager-sleek.searchExtensionSnippets",
         "title": "%extension.searchExtensionSnippets.title%",
         "icon": "$(search-fuzzy)",
-        "category": "Snippets Manager"
+        "category": "Snippets Manager Sleek"
       },
       {
         "command": "snippets-manager-sleek.showSource",
         "title": "%extension.showSource.title%",
-        "category": "Snippets Manager",
+        "category": "Snippets Manager Sleek",
         "icon": "$(go-to-file)"
       },
       {
         "command": "snippets-manager-sleek.showEditor",
         "title": "%extension.showEditor.title%",
-        "category": "Snippets Manager",
+        "category": "Snippets Manager Sleek",
         "icon": "$(file-symlink-file)"
       }
     ],
@@ -288,21 +288,20 @@
     ]
   },
   "scripts": {
-    "vscode:prepublish": "pnpm run compile && pnpm run compile-web",
-    "compile": "pnpm run editor-view:build && gulp build",
-    "watch": "concurrently \"pnpm run editor-view:watch\" \"gulp watch\"",
-    "pretest": "pnpm run compile && pnpm run lint",
-    "test": "node ./out/test/runTest.js && pnpm run test-web",
+    "vscode:prepublish": "yarn run compile && yarn run compile-web",
+    "compile": "yarn run editor-view:build && gulp build",
+    "watch": "concurrently \"yarn run editor-view:watch\" \"gulp watch\"",
+    "pretest": "yarn run compile && yarn run lint",
+    "test": "node ./out/test/runTest.js && yarn run test-web",
     "lint": "eslint src --ext ts",
-    "deploy": "vsce publish --pnpm",
+    "deploy": "vsce publish --yarn",
     "editor-view:watch": "webpack --config ./views/code-snippets-editor/webpack.config.js --watch",
     "editor-view:build": "webpack --config ./views/code-snippets-editor/webpack.config.js --mode=production --node-env=production",
     "editor-view:build:dev": "webpack --config ./views/code-snippets-editor/webpack.config.js --mode=development",
     "watch-web": "webpack --watch",
     "compile-web": "webpack --mode production --devtool hidden-source-map",
-    "pretest-web": "pnpm run compile-web",
+    "pretest-web": "yarn run compile-web",
     "test-web": "vscode-test-web ./test.temp --browserType=chromium --extensionDevelopmentPath=. --extensionTestsPath=dist/web/test/suite/index.js",
-    "change-registry": "node ./pnpm.lock.change-registry.mjs",
     "_vscode:pack": "vsce package",
     "_vscode:install": "ls snippets-manager-sleek-*.vsix | xargs code --install-extension",
     "_vscode:uninstall": "code --uninstall-extension ohxxx.snippets-manager-sleek"
