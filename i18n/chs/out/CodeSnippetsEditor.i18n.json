@@ -1,0 +1,15 @@
+{
+  "addSnippet": "Add New Snippet",
+  "name": "Name",
+  "prefix": "Prefix",
+  "scope": "Scope",
+  "description": "Desc",
+  "body": "Body",
+  "editItem": "Edit",
+  "editBody": "Edit Body",
+  "duplicateItem": "Copy",
+  "deleteItem": "Delete",
+  "save": "Save",
+  "cancel": "Cancel",
+  "noSnippets": "No snippets yet. Add one by clicking the \"Add New Snippet\" button above."
+}

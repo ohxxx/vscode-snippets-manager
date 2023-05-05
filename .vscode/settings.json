@@ -1,0 +1,29 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    ".vscode-test": true,
+    ".vscode-test-web": true,
+    "out": true,
+    "out-view": true
+  },
+  "search.exclude": {
+    ".vscode-test": true,
+    ".vscode-test-web": true,
+    "out": true,
+    "out-view": true
+  },
+  // Turn off tsc task auto detection since we have the necessary tasks as npm scripts
+  "typescript.tsc.autoDetect": "off",
+  "cSpell.words": [
+    "codicon",
+    "codicons",
+    "snippetsmanager"
+  ],
+  "explorerExclude.backup": {}
+}

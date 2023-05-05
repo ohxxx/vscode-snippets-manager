@@ -1,0 +1,157 @@
+@mixin before {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 4px;
+    background: var(--vscode-foreground);
+    z-index: -1;
+    opacity: 0.06;
+  }
+}
+
+.code-snippets-editor {
+  &-operation {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5em;
+    margin-bottom: 1em;
+
+    &__btn {
+      border-radius: 4px;
+      padding: 0.2em 0.6em;
+      display: flex;
+      align-items: center;
+      gap: 0.4em;
+      justify-content: space-between;
+      cursor: pointer;
+      color: inherit;
+      position: relative;
+      @include before;
+
+      &::before {
+        opacity: 0.2;
+      }
+    }
+  }
+
+  &-snippet {
+    &__top {
+      display: flex;
+      flex-wrap: nowrap;
+      padding-bottom: 0.5em;
+    }
+
+    &__desc {
+      padding-bottom: 0.5em;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      min-height: 24px;
+      vscode-text-field {
+        width: 100%;
+      }
+    }
+
+    &__body {
+      &__content {
+        overflow: auto;
+
+        pre {
+          margin: 4px 0 0;
+          padding: 0.4em 0.8em;
+          position: relative;
+          color: inherit;
+          @include before;
+        }
+      }
+      
+      
+    }
+
+    &__content {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.2em;
+      flex-direction: column;
+      
+      &-title {
+        font-weight: 600;
+      }
+    
+      &-input {
+        position: relative;
+        height: fit-content;
+        
+        input {
+          padding: 0.4em 0.6em;
+          border: none;
+          background: transparent;
+          color: inherit;
+          &:focus {
+            outline: none;
+          }
+        }
+    
+        @include before;
+      }
+    
+      &-textarea {
+        width: 100%;
+        position: relative;
+        height: fit-content;
+        
+        textarea {
+          min-width: 100%;
+          max-width: 100%;
+          min-height: 220px;
+          padding: 0.4em 0.6em;
+          height: fit-content;
+          border: none;
+          background: transparent;
+          color: inherit;
+          &:focus {
+            outline: none;
+          }
+        }
+        @include before;
+      }
+    }
+  }
+
+  &-top-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    align-items: center;
+
+    &__item {
+      margin-right: 1em;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  &-label {
+    font-weight: 600;
+    min-width: 50px;
+    display: inline-block;
+
+    &--body {
+      height: 24px;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &-content {
+    padding: 0.4em 0.8em;
+    display: inline-block;
+    position: relative;
+    word-break: break-all;
+    @include before;
+  }
+}
